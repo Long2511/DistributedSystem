@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_LEFT" prefHeight="600" prefWidth="800" spacing="8.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ouroboros.chatapp.distributedsystem.ChatServerController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="5.0">
+        <TextField fx:id="portField" prefWidth="80" promptText="Port" />
+        <Button fx:id="startButton" prefWidth="120" text="Start Server" />
+        <Label fx:id="statusLabel" text="Server stopped" />
+    </HBox>
+    <Label text="Connected Clients:" />
+    <ListView fx:id="clientsList" prefHeight="100.0" prefWidth="580.0" />
+    <Label text="Server Log:" />
+    <TextArea fx:id="logArea" editable="false" prefHeight="347.0" prefWidth="780.0" wrapText="true" />
+    <HBox spacing="5.0">
+        <TextField fx:id="serverMessageField" promptText="Send message to all clients..." HBox.hgrow="ALWAYS" />
+        <Button fx:id="serverSendButton" prefWidth="80" text="Send" />
+    </HBox>
+</VBox>
